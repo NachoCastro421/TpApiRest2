@@ -16,16 +16,14 @@ import java.io.Serializable;
 @Getter
 @Setter
 @Audited
-public class Autor implements Serializable {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+public class Autor extends Base {
+
 
     @Column(name = "nombreAutor")
     private String nombre;
     @Column(name = "apellidoAutor")
     private String apellido;
-    @Column(name = "biografiaAutor")
+    @Column(name = "biografiaAutor", length = 1500)
     private String biografia;
 
 }
